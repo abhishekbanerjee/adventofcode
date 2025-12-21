@@ -3,7 +3,8 @@ package dev.abhishekbanerjee.adventofcode.aoc2025
 fun main() {
     // day01()
     // day02()
-    day03()
+    // day03()
+    day04()
 }
 
 fun day01() {
@@ -31,4 +32,13 @@ fun day03() {
     println("Day 3 total joltage = " + calculateTotalJoltage(banks, 2))
     // Part Two
     println("Day 3 total joltage (part two) = " + calculateTotalJoltage(banks, 12))
+}
+
+fun day04() {
+    // Day 4: Printing Department
+    val inputFilePathDay4 = "src/main/resources/day04/input.txt"
+    val grid = readMultiLine(inputFilePathDay4)
+    println("Day 4 accessible rolls of paper = " + numAccessibleRolls(grid))
+    // Part Two
+    println("Day 4 removable rolls of paper (part two) = " + numRemovableRolls(grid))
 }
