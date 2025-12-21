@@ -2,7 +2,8 @@ package dev.abhishekbanerjee.adventofcode.aoc2025
 
 fun main() {
     // day01()
-    day02()
+    // day02()
+    day03()
 }
 
 fun day01() {
@@ -21,4 +22,13 @@ fun day02() {
     println("Day 2 answer = " + invalidIdsSumRange(idRanges, ::isRepeatingPatternTwice))
     // Part Two
     println("Day 2 answer (part two) = " + invalidIdsSumRange(idRanges, ::isRepeatingPatternGeneric))
+}
+
+fun day03() {
+    // Day 3: Lobby
+    val inputFilePathDay3 = "src/main/resources/day03/input.txt"
+    val banks = readMultiLine(inputFilePathDay3)
+    println("Day 3 total joltage = " + calculateTotalJoltage(banks, 2))
+    // Part Two
+    println("Day 3 total joltage (part two) = " + calculateTotalJoltage(banks, 12))
 }
