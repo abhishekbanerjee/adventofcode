@@ -4,7 +4,8 @@ fun main() {
     // day01()
     // day02()
     // day03()
-    day04()
+    // day04()
+    day05()
 }
 
 fun day01() {
@@ -41,4 +42,13 @@ fun day04() {
     println("Day 4 accessible rolls of paper = " + numAccessibleRolls(grid))
     // Part Two
     println("Day 4 removable rolls of paper (part two) = " + numRemovableRolls(grid))
+}
+
+fun day05() {
+    // Day 5: Cafeteria
+    val inputFilePathDay5 = "src/main/resources/day05/input.txt"
+    val (freshIds, ids) = parseIdRangesAndIds(readMultiLine(inputFilePathDay5))
+    println("Day 5 fresh ids = " + countFreshIds(freshIds, ids))
+    // Part Two
+    println("Day 5 total fresh ids (part two) = " + totalFreshIds(freshIds))
 }
