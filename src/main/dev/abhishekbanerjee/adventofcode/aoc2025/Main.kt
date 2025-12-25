@@ -6,7 +6,8 @@ fun main() {
     // day03()
     // day04()
     // day05()
-    day06()
+    // day06()
+    day07()
 }
 
 fun day01() {
@@ -55,8 +56,19 @@ fun day05() {
 }
 
 fun day06() {
+    // Day 6: Trash Compactor
     val inputFilePathDay6 = "src/main/resources/day06/input.txt"
     val worksheet = readMultiLine(inputFilePathDay6)
     println("Day 6 grand total = " + solveMath(worksheet))
+    // Part Two
     println("Day 6 grand total (part two) = " + solveCephalopodMath(worksheet))
+}
+
+fun day07() {
+    // Day 7: Laboratories
+    val inputFilePathDay7 = "src/main/resources/day07/input.txt"
+    val diagram = readMultiLine(inputFilePathDay7)
+    println("Day 7 number of splits = " + countTachyons(diagram, CountMode.SPLITS))
+    // Part Two
+    println("Day 7 number of timelines (part two) = " + countTachyons(diagram, CountMode.TIMELINES))
 }
