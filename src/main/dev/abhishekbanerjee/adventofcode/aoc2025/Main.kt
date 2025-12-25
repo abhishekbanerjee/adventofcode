@@ -5,7 +5,8 @@ fun main() {
     // day02()
     // day03()
     // day04()
-    day05()
+    // day05()
+    day06()
 }
 
 fun day01() {
@@ -51,4 +52,11 @@ fun day05() {
     println("Day 5 fresh ids = " + countFreshIds(freshIds, ids))
     // Part Two
     println("Day 5 total fresh ids (part two) = " + totalFreshIds(freshIds))
+}
+
+fun day06() {
+    val inputFilePathDay6 = "src/main/resources/day06/input.txt"
+    val worksheet = readMultiLine(inputFilePathDay6)
+    println("Day 6 grand total = " + solveMath(worksheet))
+    println("Day 6 grand total (part two) = " + solveCephalopodMath(worksheet))
 }
