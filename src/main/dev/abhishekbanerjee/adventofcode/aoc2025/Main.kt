@@ -7,7 +7,8 @@ fun main() {
     // day04()
     // day05()
     // day06()
-    day07()
+    // day07()
+    day08()
 }
 
 fun day01() {
@@ -71,4 +72,13 @@ fun day07() {
     println("Day 7 number of splits = " + countTachyons(diagram, CountMode.SPLITS))
     // Part Two
     println("Day 7 number of timelines (part two) = " + countTachyons(diagram, CountMode.TIMELINES))
+}
+
+fun day08() {
+    // Day 8: Playground
+    val inputFilePathDay8 = "src/main/resources/day08/input.txt"
+    val points = toPoints(readMultiLine(inputFilePathDay8))
+    println("Day 8 three largest circuit sizes = " + largestCircuits(points, 1000))
+    // Part Two
+    println("Day 8 x-product of last connection (part two) = " + combineTillOneComponent(points))
 }
