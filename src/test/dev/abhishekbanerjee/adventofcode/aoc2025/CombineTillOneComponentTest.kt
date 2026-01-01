@@ -6,6 +6,6 @@ import org.junit.jupiter.api.Test
 class CombineTillOneComponentTest {
     @Test
     fun combineTillOneComponent() {
-        assertEquals(25272L, combineTillOneComponent(toPoints(readMultiLine("src/test/resources/day08test.txt"))))
+        assertEquals(25272L, combineTillOneComponent(to3dPoints(readMultiLine("src/test/resources/day08test.txt"))))
     }
 }

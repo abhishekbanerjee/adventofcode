@@ -2,8 +2,6 @@ package dev.abhishekbanerjee.adventofcode.aoc2025
 
 import java.util.PriorityQueue
 
-data class Point(val x: Int, val y: Int, val z: Int)
-
 data class WeightedEdge(val weight: Long, val u: Int, val v: Int)
 
 class GraphComponents(numVertices: Int) {
@@ -41,11 +39,7 @@ class GraphComponents(numVertices: Int) {
     }
 }
 
-fun toPoints(lines: List<String>): List<Point> {
-    return lines.map { line -> line.trim().split(",").let { (x, y, z) -> Point(x.toInt(), y.toInt(), z.toInt()) } }
-}
-
-fun largestCircuits(points: List<Point>, numConnections: Int): Int {
+fun largestCircuits(points: List<Point3>, numConnections: Int): Int {
     val edgesHeap = buildEdgesHeap(points)
     val graphComponents = GraphComponents(points.size)
     repeat(numConnections) {
@@ -55,7 +49,7 @@ fun largestCircuits(points: List<Point>, numConnections: Int): Int {
     return graphComponents.nLargestComponentSizes(3).fold(1) { acc, i -> acc * i }
 }
 
-fun combineTillOneComponent(points: List<Point>): Long {
+fun combineTillOneComponent(points: List<Point3>): Long {
     val edgesHeap = buildEdgesHeap(points)
     val graphComponents = GraphComponents(points.size)
     var xProduct = 1L
@@ -67,7 +61,7 @@ fun combineTillOneComponent(points: List<Point>): Long {
     return xProduct
 }
 
-private fun buildEdgesHeap(points: List<Point>): PriorityQueue<WeightedEdge> {
+private fun buildEdgesHeap(points: List<Point3>): PriorityQueue<WeightedEdge> {
     val pointHeap = PriorityQueue<WeightedEdge>(compareBy { it.weight })
     for (i in points.indices) {
         for (j in i + 1 until points.size) {
@@ -77,7 +71,7 @@ private fun buildEdgesHeap(points: List<Point>): PriorityQueue<WeightedEdge> {
     return pointHeap
 }
 
-private fun distanceSq(point1: Point, point2: Point): Long {
+private fun distanceSq(point1: Point3, point2: Point3): Long {
     val dx = point1.x.toLong() - point2.x.toLong()
     val dy = point1.y.toLong() - point2.y.toLong()
     val dz = point1.z.toLong() - point2.z.toLong()
