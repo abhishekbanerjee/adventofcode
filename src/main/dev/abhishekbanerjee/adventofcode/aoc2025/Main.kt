@@ -9,7 +9,8 @@ fun main() {
     // day06()
     // day07()
     // day08()
-    day09()
+    // day09()
+    day10()
 }
 
 fun day01() {
@@ -91,4 +92,13 @@ fun day09() {
     println("Day 9 largest area = " + largestArea(points))
     // Part Two
     println("Day 9 largest contained area (part two) = " + largestContainedArea(points))
+}
+
+fun day10() {
+    // Day 10: Factory
+    val inputFilePathDay10 = "src/main/resources/day10/input.txt"
+    val machineStates = readMachineStates(readMultiLine(inputFilePathDay10))
+    println("Day 10 fewest presses = " + fewestPresses(machineStates, OptimizerMode.TOGGLE))
+    // Part Two
+    println("Day 10 fewest presses (part two) = " + fewestPresses(machineStates, OptimizerMode.JOLTAGE))
 }
