@@ -10,7 +10,8 @@ fun main() {
     // day07()
     // day08()
     // day09()
-    day10()
+    // day10()
+    day11()
 }
 
 fun day01() {
@@ -101,4 +102,13 @@ fun day10() {
     println("Day 10 fewest presses = " + fewestPresses(machineStates, OptimizerMode.TOGGLE))
     // Part Two
     println("Day 10 fewest presses (part two) = " + fewestPresses(machineStates, OptimizerMode.JOLTAGE))
+}
+
+fun day11() {
+    // Day 11: Reactor
+    val inputFilePathDay11 = "src/main/resources/day11/input.txt"
+    val edges = readEdges(readMultiLine(inputFilePathDay11))
+    println("Day 11 number of paths = " + countPaths(edges))
+    // Part Two
+    println("Day 11 number of paths (part two) = " + countPaths(edges, source = "svr", required = listOf("fft", "dac")))
 }
