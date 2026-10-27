@@ -11,7 +11,8 @@ fun main() {
     // day08()
     // day09()
     // day10()
-    day11()
+    // day11()
+    day12()
 }
 
 fun day01() {
@@ -111,4 +112,11 @@ fun day11() {
     println("Day 11 number of paths = " + countPaths(edges))
     // Part Two
     println("Day 11 number of paths (part two) = " + countPaths(edges, source = "svr", required = listOf("fft", "dac")))
+}
+
+fun day12() {
+    // Day 12: Christmas Tree Farm
+    val inputFilePathDay12 = "src/main/resources/day12/input.txt"
+    val text = readAll(inputFilePathDay12)
+    println("Day 12 number of fitting regions = " + possiblePackingCounter(text))
 }

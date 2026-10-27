@@ -2,6 +2,10 @@ package dev.abhishekbanerjee.adventofcode.aoc2025
 
 import java.io.File
 
+fun readAll(path: String): String {
+    return File(path).readText()
+}
+
 fun readMultiLine(path: String): List<String> {
     return File(path).readLines()
 }
